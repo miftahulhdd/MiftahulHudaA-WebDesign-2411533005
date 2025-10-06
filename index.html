@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miftahul Huda Amri</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#c9edff" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="#">ADUH</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between align-items-lg-center text-end text-lg-start" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-3 mb-lg-0 gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- hero section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+      <div class="container py-5">
+        <div class="row align-items-center justify-content-between">
+          <!-- teks -->
+          <div class="col-lg-6 text-lg-start text-center">
+            <h1 class="display-5 fw-semibold fs-1">
+              Hello, I’m
+              <br />
+              <span class="fs-1">Miftahul Huda Amri</span>
+            </h1>
+            <p class="text-muted mt-3 mb-4 fs-6">
+              Informatics undergraduate student at
+              <strong>Universitas Andalas</strong>, interested in Data Science and Web Development.
+            </p>
+          </div>
+
+          <!-- foto -->
+          <div class="col-lg-5 text-center mt-5">
+            <img src="img/_MG_9202 (1).jpg" alt="huda with cat" class="img-fluid rounded-4 shadow" width="250" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end hero section -->
+
+    <!-- pwa penj. -->
+    <section id="pwa-info" class="about-me py-5">
+      <div class="container">
+        <div class="row justify-content-center align-items-center bg-white shadow rounded-4 p-4 animated-on-scroll is-visible">
+          <h2 class="text-center fw-semibold fs-4">Website ini udah support PWA loh!</h2>
+          <p class="text-muted mb-0 fs-6 text-center">
+            Kamu bisa install web ini di device kamu, biar bisa diakses secara offline. Caranya gampang banget, tinggal klik ikon titik tiga di pojok kanan atas browser kamu, terus pilih "Install" atau "Add to Home Screen". Setelah itu, web
+            ini bakal muncul di layar utama device kamu, dan kamu bisa akses kapan aja tanpa perlu koneksi internet!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="about-me py-5">
+      <div class="container">
+        <div class="row justify-content-center align-items-center bg-white shadow rounded-4 p-4 animated-on-scroll is-visible">
+          <h2 class="text-center fw-semibold fs-4">About Me.</h2>
+          <p class="text-muted mb-0 fs-6 text-center">
+            My name is Miftahul Huda Amri, but you can call me Huda. I’m a second-year Informatics student at Andalas University. In the future, I’ll be adding my achievements, projects, and experiences to this website!
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rem facilis nostrum, architecto tempore iusto! Voluptates quibusdam commodi pariatur minima fuga voluptas tempore, nisi sint. Dolor pariatur, ut magnam dolores
+            rerum suscipit itaque laboriosam illo voluptates esse voluptas assumenda ea necessitatibus inventore. Id culpa aperiam deleniti officia ut cupiditate laudantium?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="contact py-5">
+      <div class="container">
+        <div class="row justify-content-center align-items-center bg-white shadow rounded-4 p-4 animated-on-scroll is-visible">
+          <div class="col-lg-10">
+            <header class="text-center mb-4">
+              <h2 class="fw-semibold mb-2 fs-3">Let’s Connect.</h2>
+              <p class="text-muted">Just send me an email, I won’t bite!</p>
+            </header>
+
+            <form id="contactForm" class="mt-4">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label visually-hidden">Name</label>
+                  <input type="text" id="name" class="form-control" name="name" placeholder="Name*" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label visually-hidden">Email</label>
+                  <input type="email" id="email" class="form-control" name="email" placeholder="Email*" required />
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject" class="form-label visually-hidden">Subject</label>
+                  <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject*" required />
+                </div>
+
+                <div class="col-md-12">
+                  <label for="type" class="form-label visually-hidden">Jenis Pesan</label>
+                  <select id="type" class="form-select" name="type" required>
+                    <option value="" selected disabled>Type of message*</option>
+                    <option value="pertanyaan">Questions</option>
+                    <option value="saran">Feedback</option>
+                    <option value="masalah">Problems</option>
+                  </select>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message" class="form-label visually-hidden">Message</label>
+                  <textarea id="message" class="form-control" rows="4" name="message" placeholder="Message*" required></textarea>
+                </div>
+
+                <fieldset class="col-md-12">
+                  <legend class="form-label d-block mb-2 fs-6">Do you want to get a reply?</legend>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="reply" id="replyYes" value="ya" required />
+                    <label class="form-check-label" for="replyYes">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="reply" id="replyNo" value="tidak" required />
+                    <label class="form-check-label" for="replyNo">No</label>
+                  </div>
+                </fieldset>
+
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn gradient-btn px-4 rounded-5">Submit <i class="bi bi-arrow-right ms-2"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal contact -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center border-0 rounded-4 shadow">
+          <div class="modal-body py-5">
+            <h5 class="fw-semibold mb-2">Your message has been sent!</h5>
+            <p class="text-muted mb-4">Thanks for your message! I’ll be in touch soon.</p>
+            <button type="button" class="btn gradient-btn px-4 rounded-4" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-md-6">
+            <h5 class="fw-semibold text-dark">Miftahul Huda Amri</h5>
+            <p class="text-muted" style="max-width: 400px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam cum cupiditate mollitia rem tempore blanditiis?</p>
+            <ul class="list-unstyled text-muted small">
+              <li class="mb-2">
+                <strong>Address:</strong><br />
+                Padang, Sumatera Barat
+              </li>
+              <li class="mb-2">
+                <strong>Email:</strong><br />
+                miftahulhudaamri@it.unand.ac.id
+              </li>
+              <li class="mb-2">
+                <strong>Phone:</strong><br />
+                +62 852-1111-1111
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5">
+            <div class="rounded-4 overflow-hidden shadow-sm" style="height: 200px">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31813.179593818558!2d100.3529112!3d-0.9244085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b92ed77fa2e3%3A0xd79a8e7e49cb3e2b!2sPadang%2C%20Kota%20Padang%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1715873269000!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+        <div class="text-center text-muted small">&copy; 2025 miftahulhdd. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

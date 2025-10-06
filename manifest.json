@@ -1,0 +1,20 @@
+{
+  "name": "Miftahul Huda Amri",
+  "short_name": "miftahulhdd",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#c9edff",
+  "theme_color": "c9edff",
+  "icons": [
+    {
+      "src": "img/icon b.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon a.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
