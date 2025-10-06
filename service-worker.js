@@ -1,4 +1,4 @@
-const CACHE_NAME = "huda-pwa-v7";
+const CACHE_NAME = "huda-pwa-v2";
 const ASSETS_TO_CACHE = ["./", "./index.html", "./manifest.json", "./style.css", "./script.js", "./offline.html", "./img/icona.png", "./img/iconb.png", "./img/foto1.jpg"];
 
 // install sw
@@ -22,7 +22,7 @@ self.addEventListener("fetch", (event) => {
       if (cachedResponse) {
         return cachedResponse;
       }
-      return fetch(event.request).catch(() => caches.match("/offline.html"));
+      return fetch(event.request).catch(() => caches.match("./offline.html"));
     })
   );
 });
