@@ -1,5 +1,5 @@
-const CACHE_NAME = "huda-pwa-v2";
-const ASSETS_TO_CACHE = ["./", "./index.html", "./manifest.json", "./style.css", "./script.js", "./offline.html", "./img/icona.png", "./img/iconb.png", "./img/foto1.jpg"];
+const CACHE_NAME = "huda-pwa-v1";
+const ASSETS_TO_CACHE = ["./", "./index.html", "./offline.html", "./manifest.json", "./style.css", "./script.js", "./img/foto1.jpg", "./img/icona.png", "./img/iconb.png"];
 
 // install sw
 self.addEventListener("install", (event) => {
@@ -10,19 +10,30 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// activate sw
 self.addEventListener("activate", (event) => {
-  console.log("Service Worker activated");
-});
-
-// fetch asset
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).catch(() => caches.match("./offline.html"));
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)));
     })
   );
+  console.log("Service Worker activated.");
+});
+
+// fetch
+self.addEventListener("fetch", (event) => {
+  if (event.request.mode === "navigate") {
+    // if user minta halaman baru, fallback ke offline.html saat offline
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => response)
+        .catch(() => caches.match("./offline.html"))
+    );
+  } else {
+    // asset load dari cache atau fetch
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        return cachedResponse || fetch(event.request);
+      })
+    );
+  }
 });
