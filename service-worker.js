@@ -1,5 +1,13 @@
-const CACHE_NAME = "huda-pwa-v1";
-const ASSETS_TO_CACHE = ["./", "./index.html", "./offline.html", "./manifest.json", "./style.css", "./script.js", "./img/foto1.jpg", "./img/icona.png", "./img/iconb.png"];
+const CACHE_NAME = "huda-pwa-v7";
+const ASSETS_TO_CACHE = ["./",
+    "./index.html",
+    "./offline.html",
+    "./manifest.json",
+    "./style.css",
+    "./script.js",
+    "./img/foto1.jpg",
+    "./img/icona.png",
+    "./img/iconb.png"];
 
 // install sw
 self.addEventListener("install", (event) => {
