@@ -24,15 +24,24 @@ let deferredPrompt;
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
+
+  const installContainer = document.getElementById("install-pwa");
+
   const installBtn = document.createElement("button");
   installBtn.innerText = "Install PWA";
-  document.body.appendChild(installBtn);
+  installBtn.className = "btn gradient-btn px-4 rounded-5";
+
+  installContainer.appendChild(installBtn);
 
   installBtn.addEventListener("click", () => {
+    installBtn.disabled = true;
     deferredPrompt.prompt();
+
     deferredPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === "accepted") {
         console.log("User accepted the install prompt");
+      } else {
+        console.log("User dismissed the install prompt");
       }
       deferredPrompt = null;
       installBtn.remove();
